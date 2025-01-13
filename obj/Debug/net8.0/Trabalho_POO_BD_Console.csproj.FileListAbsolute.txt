@@ -1,0 +1,14 @@
+D:\Usuario\Desktop\Trabalho_POO_BD_Console\Trabalho_POO_BD_Console\bin\Debug\net8.0\Trabalho_POO_BD_Console.exe
+D:\Usuario\Desktop\Trabalho_POO_BD_Console\Trabalho_POO_BD_Console\bin\Debug\net8.0\Trabalho_POO_BD_Console.deps.json
+D:\Usuario\Desktop\Trabalho_POO_BD_Console\Trabalho_POO_BD_Console\bin\Debug\net8.0\Trabalho_POO_BD_Console.runtimeconfig.json
+D:\Usuario\Desktop\Trabalho_POO_BD_Console\Trabalho_POO_BD_Console\bin\Debug\net8.0\Trabalho_POO_BD_Console.dll
+D:\Usuario\Desktop\Trabalho_POO_BD_Console\Trabalho_POO_BD_Console\bin\Debug\net8.0\Trabalho_POO_BD_Console.pdb
+D:\Usuario\Desktop\Trabalho_POO_BD_Console\Trabalho_POO_BD_Console\obj\Debug\net8.0\Trabalho_POO_BD_Console.GeneratedMSBuildEditorConfig.editorconfig
+D:\Usuario\Desktop\Trabalho_POO_BD_Console\Trabalho_POO_BD_Console\obj\Debug\net8.0\Trabalho_POO_BD_Console.AssemblyInfoInputs.cache
+D:\Usuario\Desktop\Trabalho_POO_BD_Console\Trabalho_POO_BD_Console\obj\Debug\net8.0\Trabalho_POO_BD_Console.AssemblyInfo.cs
+D:\Usuario\Desktop\Trabalho_POO_BD_Console\Trabalho_POO_BD_Console\obj\Debug\net8.0\Trabalho_POO_BD_Console.csproj.CoreCompileInputs.cache
+D:\Usuario\Desktop\Trabalho_POO_BD_Console\Trabalho_POO_BD_Console\obj\Debug\net8.0\Trabalho_POO_BD_Console.dll
+D:\Usuario\Desktop\Trabalho_POO_BD_Console\Trabalho_POO_BD_Console\obj\Debug\net8.0\refint\Trabalho_POO_BD_Console.dll
+D:\Usuario\Desktop\Trabalho_POO_BD_Console\Trabalho_POO_BD_Console\obj\Debug\net8.0\Trabalho_POO_BD_Console.pdb
+D:\Usuario\Desktop\Trabalho_POO_BD_Console\Trabalho_POO_BD_Console\obj\Debug\net8.0\Trabalho_POO_BD_Console.genruntimeconfig.cache
+D:\Usuario\Desktop\Trabalho_POO_BD_Console\Trabalho_POO_BD_Console\obj\Debug\net8.0\ref\Trabalho_POO_BD_Console.dll
