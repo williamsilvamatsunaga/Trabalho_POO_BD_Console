@@ -12,3 +12,4 @@ D:\Usuario\Desktop\Trabalho_POO_BD_Console\Trabalho_POO_BD_Console\obj\Debug\net
 D:\Usuario\Desktop\Trabalho_POO_BD_Console\Trabalho_POO_BD_Console\obj\Debug\net8.0\Trabalho_POO_BD_Console.pdb
 D:\Usuario\Desktop\Trabalho_POO_BD_Console\Trabalho_POO_BD_Console\obj\Debug\net8.0\Trabalho_POO_BD_Console.genruntimeconfig.cache
 D:\Usuario\Desktop\Trabalho_POO_BD_Console\Trabalho_POO_BD_Console\obj\Debug\net8.0\ref\Trabalho_POO_BD_Console.dll
+D:\Usuario\Desktop\Trabalho_POO_BD_Console\Trabalho_POO_BD_Console\obj\Debug\net8.0\Trabalho_POO_BD_Console.sourcelink.json

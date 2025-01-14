@@ -19,24 +19,47 @@
             {
                 case 1:
                     {
-                        try
-                        {
-                            Console.Write("Digite o nome do cliente: ");
-                            string nome = Console.ReadLine();
+                        bool validar_nome = false;
 
-                            c.SetTratamentoCliente(nome);
-                        }
-                        catch(Exception ex)
+                        while (!validar_nome)
                         {
-                            Console.WriteLine($"Erro ao cadastrar cliente!+ {ex.Message}");
+                            try
+                            {
+                                Console.Write("Digite o nome do cliente: ");
+                                string nome = Console.ReadLine();
+                                c.SetTratamentoCliente(nome);
+
+                                validar_nome = true;
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.WriteLine($"Erro ao cadastrar nome! {ex.Message}");
+                            }
                         }
 
-                
+                        bool validar_cpf = false;
+
+                        while (!validar_cpf)
+                        {
+                            try
+                            {
+                                Console.Write("Digite o CPF do cliente: ");
+                                string cpf = Console.ReadLine();
+                                c.SetTratamentoCpf(cpf);
+
+                                validar_cpf = true;
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.WriteLine($"Erro ao cadastrar cpf! {ex.Message}");
+                            }
+                        }
+
                         break;
                     }
                 case 2:
                     {
-                        Console.WriteLine($"{c.GetNome()}");
+                        Console.WriteLine($"{c.GetList()}");
 
                         break;
                     }
