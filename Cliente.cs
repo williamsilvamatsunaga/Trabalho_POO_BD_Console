@@ -1,4 +1,6 @@
-﻿public class Cliente
+﻿using System.Text.RegularExpressions;
+
+public class Cliente
 {
     private int id_cliente;
     private string nome;
@@ -9,7 +11,7 @@
 
     public void SetTratamentoCliente(string nome)
     {
-        if (nome.Length >= 50)
+        if (nome.Length > 50)
         {
             throw new Exception("O nome deve conter no máximo 50 caracteres.");
         }
@@ -72,9 +74,41 @@
         this.cpf = cpf;
     }
 
+    public void SetTratamentoEmail(string email)
+    {
+        if (email.Length > 320)
+        {
+            throw new Exception("Comprimento excedo o limite permitido.");
+        }
+
+        string emailPattern = @"^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+        if(!Regex.IsMatch(email, emailPattern))
+        {
+            throw new Exception("Formato incorreto.");
+        }
+    }
+
+    public void SetTratamentoTelefone(string telefone)
+    {
+        telefone = telefone.Replace("(", "").Replace(")", "").Replace("-", "").Trim();
+
+        if (!telefone.All(char.IsDigit))
+        {
+            throw new Exception("O número deve conter apenas díditos.");
+        }
+
+        if (telefone.Length != 11)
+        {
+            throw new Exception("O número deve conter 11 dígitos.");
+        }
+
+
+    }
+
     public string GetList()
     {
         return $"Nome: {this.nome}\n" +
-            $"CPF: {this.cpf}";
+            $"CPF: {this.cpf}\n" +
+            $"Email: {this.email}";
     }
 }

@@ -20,7 +20,6 @@
                 case 1:
                     {
                         bool validar_nome = false;
-
                         while (!validar_nome)
                         {
                             try
@@ -38,7 +37,6 @@
                         }
 
                         bool validar_cpf = false;
-
                         while (!validar_cpf)
                         {
                             try
@@ -52,6 +50,40 @@
                             catch (Exception ex)
                             {
                                 Console.WriteLine($"Erro ao cadastrar cpf! {ex.Message}");
+                            }
+                        }
+
+                        bool validar_email = false;
+                        while (!validar_email)
+                        {
+                            try
+                            {
+                                Console.Write("Digite o email do cliente: ");
+                                string email = Console.ReadLine();
+                                c.SetTratamentoEmail(email);
+
+                                validar_email = true;
+                            }
+                            catch(Exception ex)
+                            {
+                                Console.WriteLine($"Erro ao cadastrar email! {ex.Message}");
+                            }
+                        }
+
+                        bool validar_telefone = false;
+                        while (!validar_telefone)
+                        {
+                            try
+                            {
+                                Console.Write("Digite o telefone do cliente: ");
+                                string telefone = Console.ReadLine();
+                                c.SetTratamentoTelefone(telefone);
+
+                                validar_telefone = true;
+                            }
+                            catch(Exception ex)
+                            {
+                                Console.WriteLine($"Erro ao cadastrar telefone! {ex.Message}");
                             }
                         }
 
