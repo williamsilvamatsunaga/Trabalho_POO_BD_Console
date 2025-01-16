@@ -1,4 +1,5 @@
 ﻿using System.Text.RegularExpressions;
+using System.Threading.Channels;
 
 public class Cliente
 {
@@ -8,8 +9,9 @@ public class Cliente
     private string email;
     private string telefone;
     private string endereco;
+    private static List<Cliente> listaClientes = new List<Cliente>(); 
 
-    public void SetTratamentoCliente(string nome)
+    public void SetTratamentoNome(string nome)
     {
         if (nome.Length > 50)
         {
@@ -86,6 +88,8 @@ public class Cliente
         {
             throw new Exception("Formato incorreto.");
         }
+
+        this.email = email;
     }
 
     public void SetTratamentoTelefone(string telefone)
@@ -102,13 +106,44 @@ public class Cliente
             throw new Exception("O número deve conter 11 dígitos.");
         }
 
-
+        this.telefone = telefone;
     }
 
-    public string GetList()
+    public void SetTratamentoEndereco(string endereco)
     {
-        return $"Nome: {this.nome}\n" +
-            $"CPF: {this.cpf}\n" +
-            $"Email: {this.email}";
+        if (endereco.Length >= 500)
+        {
+            throw new Exception("Tamanho de texto excedido.");
+        }
+
+        this.endereco = endereco;
+    }
+
+    public Cliente(string nome, string cpf, string email, string telefone, string endereco)
+    {
+        SetTratamentoNome(nome);
+        SetTratamentoCpf(cpf);
+        SetTratamentoEmail(email);
+        SetTratamentoTelefone(telefone);
+        SetTratamentoEndereco(endereco);
+
+        listaClientes.Add(this);
+    }
+
+    public static string GetList()
+    {
+        string listar = "=== Lista de Clientes ===";
+
+        foreach (var c in listaClientes)
+        {
+            listar += $"\nNome: {c.nome}\n" +
+                $"CPF: {c.cpf}\n" +
+                $"Email: {c.email}\n" +
+                $"Telefone: {c.telefone}\n" +
+                $"Endereço: {c.endereco}\n" +
+                $"---OUTRO---";
+        }
+
+        return listar;
     }
 }

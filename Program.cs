@@ -2,7 +2,6 @@
 {
     public static void Main(string[] args)
     {
-        Cliente c = new Cliente();
 
         int escolha = 0;
 
@@ -19,14 +18,14 @@
             {
                 case 1:
                     {
+                        string nome = "";
                         bool validar_nome = false;
                         while (!validar_nome)
                         {
                             try
                             {
                                 Console.Write("Digite o nome do cliente: ");
-                                string nome = Console.ReadLine();
-                                c.SetTratamentoCliente(nome);
+                                nome = Console.ReadLine();
 
                                 validar_nome = true;
                             }
@@ -36,14 +35,14 @@
                             }
                         }
 
+                        string cpf = "";
                         bool validar_cpf = false;
                         while (!validar_cpf)
                         {
                             try
                             {
                                 Console.Write("Digite o CPF do cliente: ");
-                                string cpf = Console.ReadLine();
-                                c.SetTratamentoCpf(cpf);
+                                cpf = Console.ReadLine();
 
                                 validar_cpf = true;
                             }
@@ -53,14 +52,14 @@
                             }
                         }
 
+                        string email = "";
                         bool validar_email = false;
                         while (!validar_email)
                         {
                             try
                             {
                                 Console.Write("Digite o email do cliente: ");
-                                string email = Console.ReadLine();
-                                c.SetTratamentoEmail(email);
+                                email = Console.ReadLine();
 
                                 validar_email = true;
                             }
@@ -70,14 +69,14 @@
                             }
                         }
 
+                        string telefone = "";
                         bool validar_telefone = false;
                         while (!validar_telefone)
                         {
                             try
                             {
                                 Console.Write("Digite o telefone do cliente: ");
-                                string telefone = Console.ReadLine();
-                                c.SetTratamentoTelefone(telefone);
+                                telefone = Console.ReadLine();
 
                                 validar_telefone = true;
                             }
@@ -87,11 +86,30 @@
                             }
                         }
 
+                        string endereco = "";
+                        bool validar_endereco = false;
+                        while (!validar_endereco)
+                        {
+                            try
+                            {
+                                Console.Write("Digite o endereço do cliente: ");
+                                endereco = Console.ReadLine();
+
+                                validar_endereco = true;
+                            }
+                            catch( Exception ex)
+                            {
+                                Console.WriteLine($"Erro ao cadastrar telefone! {ex.Message}");
+                            }
+                        }
+
+                        Cliente c = new Cliente(nome, cpf, email, telefone, endereco);
+
                         break;
                     }
                 case 2:
                     {
-                        Console.WriteLine($"{c.GetList()}");
+                        Console.WriteLine(Cliente.GetList());
 
                         break;
                     }
